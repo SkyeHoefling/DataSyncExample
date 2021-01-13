@@ -24,12 +24,16 @@
             <Setter Property="FontSize" Value="48" />
             <Setter Property="TextColor" Value="#000" />
             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
         </Style>
         
         <Style x:Key="Header" TargetType="Label">
             <Setter Property="FontSize" Value="18" />
             <Setter Property="TextColor" Value="Gray" />
             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
         </Style>
         
         <Style x:Key="Message" TargetType="Label">

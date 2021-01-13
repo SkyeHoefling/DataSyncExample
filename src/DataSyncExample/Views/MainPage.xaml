@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:vm="clr-namespace:DataSyncExample.ViewModels;assembly=DataSyncExample"
              xmlns:local="clr-namespace:DataSyncExample;assembly=DataSyncExample"
              xmlns:converters="clr-namespace:DataSyncExample.Converters;assembly=DataSyncExample"
@@ -13,11 +14,11 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:SyncStatusConverter x:Key="TitleConverter"
-                                            Connecting="Connecting"
-                                            Downloading="Retrieving Data"
-                                            Uploading="Uploading"
-                                            Success="Success"
-                                            Failure="Failure" />
+                                            Connecting="{xct:Translate SuccessTitle}"
+                                            Downloading="{xct:Translate DownloadingTitle}"
+                                            Uploading="{xct:Translate UploadingTitle}"
+                                            Success="{xct:Translate SuccessTitle}"
+                                            Failure="{xct:Translate FailureTitle}" />
             
             <converters:SyncStatusConverter x:Key="HeaderConverter"
                                             Connecting="Andrew Hoefling"
@@ -35,11 +36,11 @@
                 Failure="{FontImage Color=Red, Size=200, Glyph={x:Static local:MaterialIconsFont.CloseCircle}, FontFamily={StaticResource MaterialIcons}}" />
             
             <converters:SyncStatusConverter x:Key="MessageConverter"
-                                            Connecting="Connecting to Server . . ."
-                                            Downloading="Downloading files from Server . . ."
-                                            Uploading="Uploading files to Server . . ."
-                                            Success="Al data is up to date!"
-                                            Failure="Failed to connect to server!"/>
+                                            Connecting="{xct:Translate ConnectingMessage}"
+                                            Downloading="{xct:Translate DownloadingMessage}"
+                                            Uploading="{xct:Translate UploadingMessage}"
+                                            Success="{xct:Translate SuccessMessage}"
+                                            Failure="{xct:Translate FailureMessage}" />
         </ResourceDictionary>
     </ContentPage.Resources>
     

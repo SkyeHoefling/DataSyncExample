@@ -1,4 +1,7 @@
-﻿using DataSyncExample.Views;
+﻿using System.Globalization;
+using DataSyncExample.Resx;
+using DataSyncExample.Views;
+using Xamarin.CommunityToolkit.Helpers;
 using Xamarin.Forms;
 
 namespace DataSyncExample
@@ -10,13 +13,19 @@ namespace DataSyncExample
             InitializeComponent();
 
             // First approach - messy
-            //MainPage = new MainPage_Everything();
+            MainPage = new MainPage_Everything();
             
+            #region second
             // second approach - reactive
             //MainPage = new MainPage_Basic();
-            
+            #endregion
+
+            #region third
             // third approach - reactive with bindable object
-            MainPage = new MainPage();
+            // LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
+            // LocalizationResourceManager.Current.SetCulture(new CultureInfo("es"));
+            // MainPage = new MainPage();
+            #endregion
         }
 
         protected override void OnStart()
