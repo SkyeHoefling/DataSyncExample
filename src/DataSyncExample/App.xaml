@@ -36,6 +36,8 @@
             <Setter Property="FontSize" Value="32" />
             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
         </Style>
     </Application.Resources>
 </Application>

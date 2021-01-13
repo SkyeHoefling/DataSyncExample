@@ -11,7 +11,11 @@ namespace DataSyncExample
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            // First approach - messy
+            MainPage = new MainPage_Everything();
+            
+            // second approach - reactive
+            //MainPage = new MainPage();
         }
 
         protected override void OnStart()

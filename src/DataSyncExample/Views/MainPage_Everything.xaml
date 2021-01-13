@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataSyncExample;assembly=DataSyncExample"
+             xmlns:viewModels="clr-namespace:DataSyncExample.ViewModels;assembly=DataSyncExample"
+             x:Class="DataSyncExample.Views.MainPage_Everything">
+    
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel_Everything />
+    </ContentPage.BindingContext>
+    
+    <StackLayout Spacing="0">
+        <Frame Style="{StaticResource TopFrame}">
+            <Label Text="Data Sync Example" Style="{StaticResource TopFrameLabel}"/>
+        </Frame>
+        <Label Text="{Binding Title}"
+               Style="{StaticResource Title}" />
+        <Label Text="{Binding Header}"
+               Style="{StaticResource Header}" />
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.RowSpan="2"
+                   VerticalOptions="CenterAndExpand"
+                   Source="{Binding Icon}" />
+            <StackLayout Grid.Row="1" Grid.RowSpan="2" 
+                         Margin="0, 80, 0, 0">
+                <Label Text="{Binding Message}"
+                       Style="{StaticResource Message}" />
+            </StackLayout>
+        </Grid>
+        
+        <Button Text="Start Sync"
+                Command="{Binding Start}"
+                Margin="10, 0, 10, 10"
+                VerticalOptions="End" />
+    </StackLayout>
+    
+</ContentPage>
