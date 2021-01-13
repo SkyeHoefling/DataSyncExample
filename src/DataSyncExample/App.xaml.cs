@@ -1,7 +1,5 @@
-﻿using System;
-using DataSyncExample.Views;
+﻿using DataSyncExample.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace DataSyncExample
 {
@@ -12,10 +10,13 @@ namespace DataSyncExample
             InitializeComponent();
 
             // First approach - messy
-            MainPage = new MainPage_Everything();
+            //MainPage = new MainPage_Everything();
             
             // second approach - reactive
-            //MainPage = new MainPage();
+            //MainPage = new MainPage_Basic();
+            
+            // third approach - reactive with bindable object
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

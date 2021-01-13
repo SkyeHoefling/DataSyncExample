@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace DataSyncExample.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage_Basic : ContentPage
     {
-        public MainPage() =>
+        public MainPage_Basic() =>
             InitializeComponent();
     }
 }
